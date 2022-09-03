@@ -1,3 +1,13 @@
 .hidden {
     display: none;
 }
+
+.backscreen {
+    
+}
+
+body {
+    height: 100vh;
+    background: url() no-repeat center;
+    background-size: cover;
+}
