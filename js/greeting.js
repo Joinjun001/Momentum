@@ -5,14 +5,27 @@ const greeting = document.querySelector("#greeting");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
+const date = new Date();
+const hours = date.getHours();
+console.log(hours);
+
 //DB에 username을 입력받아서, username이 있으면 form을 넘어가고 바로 hello username
 //으로 넘어갈수 있게 만들어본다.
 // form이 처음부터 출력되면 안되므로 index.html에서 두 element 모두 class= "hidden" 추가.
 
 function paintGreetings(username) {
-    greeting.innerText = `Hello ${username}`;
-    greeting.classList.remove(HIDDEN_CLASSNAME);
-
+    if (hours > 6 && hours < 12) {
+        greeting.innerText = `Good morning, ${username}.`;
+        greeting.classList.remove(HIDDEN_CLASSNAME);
+    }
+    else if (hours >= 12 && hours <= 17) {
+        greeting.innerText = `Good afternoon, ${username}.`;
+        greeting.classList.remove(HIDDEN_CLASSNAME);
+    }
+    else {
+        greeting.innerText = `Good night, ${username}.`;
+        greeting.classList.remove(HIDDEN_CLASSNAME);
+    }
 }
 function onLoginSubmit(event) {
     event.preventDefault();

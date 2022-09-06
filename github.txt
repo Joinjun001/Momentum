@@ -14,3 +14,9 @@ v1 > 처음 만든 momentum 파일 (노마드코더 강의 그대로)
 v1.1 > 필요없는 파일 (practice.py) 정리하고 커밋 되는지 확인
 
 v1.11 > 화면 가독성 높이고 css 다듬어주기. (다음버전에 bootstrap사용해서 디자인해보자.)
+
+v1.12 > 일단 bootstrap 제거 (적용이 안됨) 다른 js파일에서 적용해보고 이 웹페이지에 적용시켜보자.
+그리고 원래 있던 momentum과 최대한 비슷하게 코딩해주기.
+
+v1.13 > bootstrap 적용완료, 이제 bootstrap에서 필요한 style은 classname 넣어서 하면됨.
+(What is your main focus) 부분 디자인 변경.

@@ -14,19 +14,21 @@
 #greeting {
     font-size: 4em;
     color : white;
-    text-shadow: 2px 2px 2px #000;
+    text-shadow: 1px 1px 1px rgb(80, 80, 80);
     text-align:center;
 }
 
 #quote {
+    margin-top: 2em;
     color:white;
-    text-shadow: 2px 2px 2px #000;
+    font-size: 1.25em;
+    text-shadow: 1px 1px 1px rgb(80, 80, 80);
     text-align:center;
 }
 
 #weather {
     color:white;
-    text-shadow: 2px 2px 2px #000;
+    text-shadow: 1px 1px 1px rgb(80, 80, 80);
     text-align: center;
 
     
@@ -34,9 +36,9 @@
 
 #clock {
     margin-top:1.5em;
-    font-size: 8em;
+    font-size: 10em;
     color: white;
-    text-shadow: 2px 2px 2px #000;
+    text-shadow: 1px 1px 1px rgb(80, 80, 80);
     text-align:center;
 }
 
@@ -49,10 +51,29 @@
 }
 
 #todo-list {
-    fons-size:2em;
-    text-align:center;
+    font-size:1em;
+    text-align: center;
     color:white;
-    text-shadow: 2px 2px 2px #000;
+    text-shadow: 1px 1px 1px rgb(80, 80, 80);
     list-style: none;
 }
 
+.input-box {
+    border-left-width:0;
+    border-right-width:0;
+    border-top-width:0;
+    border-bottom-width:3px;
+    border-color:white;
+    background-color: transparent;
+    width:20em;
+    color:white;
+    font-size:1.5em;
+    text-align: center;
+    font-weight:500;
+    text-shadow: 1px 1px 1px rgb(80, 80, 80);
+}
+
+#today-text {
+    color:white;
+    font-size:1.5em;
+}
