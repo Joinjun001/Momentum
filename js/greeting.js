@@ -7,7 +7,6 @@ const USERNAME_KEY = "username";
 
 const date = new Date();
 const hours = date.getHours();
-console.log(hours);
 
 //DB에 username을 입력받아서, username이 있으면 form을 넘어가고 바로 hello username
 //으로 넘어갈수 있게 만들어본다.

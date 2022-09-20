@@ -20,3 +20,6 @@ v1.12 > 일단 bootstrap 제거 (적용이 안됨) 다른 js파일에서 적용�
 
 v1.13 > bootstrap 적용완료, 이제 bootstrap에서 필요한 style은 classname 넣어서 하면됨.
 (What is your main focus) 부분 디자인 변경.
+
+다음에 해야할 거 > todoInput이 비어있으면 다시 toDoForm 나타내기
+(saveTodo가 있으면 todoform 없애는거랑 input 입력하면 todoForm 없애는거 까진 만듬)

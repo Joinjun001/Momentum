@@ -4,6 +4,11 @@ const toDoList = document.querySelector("#todo-list");
 
 const TODOS_KEY = "todos";
 let toDos = [];
+const HIDDEN_KEY = "hidden";
+
+function hideToDoForm() {
+    toDoForm.classList.add(HIDDEN_KEY);
+}
 
 function savedToDos() {
     // toDOs를 array 모양으로 저장하기 위해 JSON.stringify 를 사용해서 문자화 시켜줌.
@@ -18,6 +23,7 @@ function deleteToDo(event) {
     toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id)); 
     savedToDos();
 }
+
 // submit 
 function paintToDo(newTodo) {
     const li = document.createElement("li");
@@ -48,17 +54,27 @@ function handleToDoSubmit(event) {
     toDos.push(newTodoObj);
     paintToDo(newTodoObj);
     savedToDos(newTodo);
+
+    hideToDoForm();
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
 
-const saveToDos = localStorage.getItem(TODOS_KEY);
+const saveToDos = localStorage.getItem(TODOS_KEY)
 
-if (saveToDos !== null) { //새로고침했는데 이미 todo리스트 있으면 paintTodo로 원래 있던
+if (saveToDos !== null){ //새로고침했는데 이미 todo리스트 있으면 paintTodo로 원래 있던
     // savedTodos를 paint 해주기 
     const parsedTodos = JSON.parse(saveToDos); //문자열로 만들었었던 array를 다시 
     // JSON.parse로 array로 바꿔줌
     toDos = parsedTodos; // localStorage에 덮어씌우지 않기 위함
-    parsedTodos.forEach(paintToDo)  
+    parsedTodos.forEach(paintToDo);
 }
+
+if (saveToDos !== "[]") { // localStorage에 이미 todo있으면 toDoForm 숨기기
+    // JSON.parse 쓸려했는데 자료형때문에 오류가 나서 "[]"로 사용.
+    // localStorage에 있는 자료들은 다 문자열 형태로 저장된다는 점 기억. 
+    hideToDoForm();
+}
+
+    
