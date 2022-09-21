@@ -5,6 +5,8 @@ const toDoList = document.querySelector("#todo-list");
 const TODOS_KEY = "todos";
 let toDos = [];
 const HIDDEN_KEY = "hidden";
+const DISAPPEAR_KEY = "disappear";
+const APPEAR_KEY = "appear";
 
 function hideToDoForm() {
     toDoForm.classList.add(HIDDEN_KEY);
@@ -22,6 +24,12 @@ function deleteToDo(event) {
     li.remove();
     toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id)); 
     savedToDos();
+
+    if (toDoList.children.length === 0){
+        toDoForm.classList.remove(HIDDEN_KEY);
+        toDoForm.classList.add(APPEAR_KEY);
+    }
+    
 }
 
 // submit 
@@ -36,6 +44,7 @@ function paintToDo(newTodo) {
     li.appendChild(span); 
     li.appendChild(button);
     toDoList.appendChild(li);
+    li.classList.add(APPEAR_KEY);
 }
 
 // greeting에서 만들었던 함수를 만들어준다.
@@ -54,7 +63,6 @@ function handleToDoSubmit(event) {
     toDos.push(newTodoObj);
     paintToDo(newTodoObj);
     savedToDos(newTodo);
-
     hideToDoForm();
 }
 

@@ -23,3 +23,9 @@ v1.13 > bootstrap 적용완료, 이제 bootstrap에서 필요한 style은 classn
 
 다음에 해야할 거 > todoInput이 비어있으면 다시 toDoForm 나타내기
 (saveTodo가 있으면 todoform 없애는거랑 input 입력하면 todoForm 없애는거 까진 만듬)
+
+v1.14 > todoInput 없어지면 toDoForm 나타내기, 
+saveTodo 있으면 todoForm 없애기
+input 입력시 todoForm 없애기
+사라지고 나타날때 css 애니메이션 적용
+로그인 폼이 위에 뜨던 오류 수정 

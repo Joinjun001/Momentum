@@ -48,7 +48,10 @@
 
 #todo-form {
     text-align:center;
+    transition:all 1s;
 }
+
+
 
 #todo-list {
     font-size:1em;
@@ -76,4 +79,35 @@
 #today-text {
     color:white;
     font-size:1.5em;
+}
+
+.appear {
+    animation-name:fadeOut;
+    animation-duration:0.8s;
+    animation-timing-function: linear;
+
+}
+
+@keyframes fadeOut {
+    from{
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.disappear {
+    animation-name:fadeIn;
+    animation-duration:0.8s;
+    animation-timing-function: linear;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
 }
